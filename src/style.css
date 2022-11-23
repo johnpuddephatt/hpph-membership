@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+@layer base {
+  details > summary::marker,
+  details > summary::-webkit-details-marker {
+    display: none;
+    content: "";
+  }
+
+  details > summary {
+    @apply cursor-pointer;
+  }
+
+  .container {
+    @apply max-w-none mx-auto pb-6;
+  }
+
+  @font-face {
+    font-family: "Basis Grotesque";
+    font-weight: 400;
+    font-style: italic;
+    src: url(./assets/fonts/BasisGrotesquePro-Italic.woff) format("woff"),
+      url(./assets/fonts/BasisGrotesquePro-Italic.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Basis Grotesque";
+    font-weight: 400;
+    src: url(./assets/fonts/BasisGrotesquePro-Regular.woff) format("woff"),
+      url(./assets/fonts/BasisGrotesquePro-Regular.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Basis Grotesque";
+    font-weight: 700;
+    src: url(./assets/fonts/BasisGrotesquePro-Black.woff) format("woff"),
+      url(./assets/fonts/BasisGrotesquePro-Black.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Basis Grotesque Mono";
+    font-weight: 400;
+    src: url(./assets/fonts/BasisGrotesqueMonoPro-Regular.woff) format("woff"),
+      url(./assets/fonts/BasisGrotesqueMonoPro-Regular.woff2) format("woff2");
+  }
+}
+
+@layer utilities {
+  .type-h1 {
+    @apply text-[4.375rem] font-bold leading-[92.85%] tracking-[-0.05em];
+  }
+
+  .type-h2 {
+    @apply text-[3.75rem] font-bold leading-[103%] tracking-[-0.05em];
+  }
+
+  .type-h3 {
+    @apply text-[3.125rem] font-bold leading-[104%] tracking-[-0.04em];
+  }
+
+  .type-h4 {
+    @apply text-[2.5rem] font-bold leading-[104%] tracking-[-0.04em];
+  }
+
+  .type-h5 {
+    @apply text-[1.875rem] font-bold leading-[117%] tracking-[-0.035em];
+  }
+
+  .type-subtitle {
+    @apply text-[1.25rem] font-bold leading-[120%] tracking-[-0.025em];
+  }
+
+  .type-subtitle-copy {
+    @apply text-[1.25rem] leading-[120%] tracking-[-0.015em];
+  }
+
+  .type-large {
+    @apply text-[1.25rem] leading-[130%] tracking-[-0.015em];
+  }
+
+  .type-label {
+    @apply font-mono text-[0.75rem] uppercase leading-[117%] tracking-[0.030em] font-normal;
+  }
+
+  .type-annotation {
+    @apply font-mono text-[0.9375rem] leading-[120%] tracking-[-0.015em];
+  }
+}

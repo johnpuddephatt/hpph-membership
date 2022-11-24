@@ -2,6 +2,17 @@
 import { ref, reactive, computed } from "vue";
 import InlineSvg from "vue-inline-svg";
 
+document.addEventListener("keydown", onKeydown);
+
+function onKeydown(event) {
+  if (event.key == "ArrowLeft") {
+    increaseStrandIndex();
+  }
+  if (event.key == "ArrowRight") {
+    decreaseStrandIndex();
+  }
+}
+
 const strands = [
   {
     angle: 3.92699,
@@ -22,6 +33,8 @@ const strands = [
   {
     angle: 3.14159,
     color: "#FD4AC2",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/creatures.mp4",
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
@@ -73,6 +86,8 @@ const strands = [
     angle: -0.3926991,
     color: "#6EFF69",
     name: "Memory Matinees",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/memorymatinees.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -81,6 +96,8 @@ const strands = [
     angle: -0.785398,
     color: "#FEAD52",
     name: "Hyde & Seek",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/hydeandseek.mp4",
     logo: "logos/Hyde&Seek.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -199,7 +216,13 @@ const selectedStrand = computed(() => {
 
 const playing = ref(false);
 
+function updateSelectedStrandIndex(value) {
+  playing.value = false;
+  selectedStrandIndex.value = value;
+}
+
 function increaseStrandIndex() {
+  playing.value = false;
   if (selectedStrandIndex.value < strands.length - 1) {
     selectedStrandIndex.value++;
   } else {
@@ -208,6 +231,7 @@ function increaseStrandIndex() {
 }
 
 function decreaseStrandIndex() {
+  playing.value = false;
   if (selectedStrandIndex.value > 0) {
     selectedStrandIndex.value--;
   } else {
@@ -230,6 +254,7 @@ function decreaseStrandIndex() {
     </h3>
 
     <video
+      :key="selectedStrand.video"
       v-if="selectedStrand.video"
       class="inset-0 absolute transition duration-1000 w-full h-full object-cover object-center"
       :class="{ 'opacity-50': playing, 'opacity-0': !playing }"
@@ -305,7 +330,7 @@ function decreaseStrandIndex() {
     >
       <button
         v-for="(strand, key) in strands"
-        @click="selectedStrandIndex = key"
+        @click="updateSelectedStrandIndex(key)"
         class="w-4 h-4 rounded-full left-1/2 top-1/2 absolute hover:scale-125 transition transform"
         :style="`background-color: ${strand.color};--tw-translate-x : ${
           Math.cos(strand.angle) * 50

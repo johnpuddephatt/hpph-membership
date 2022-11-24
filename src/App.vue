@@ -293,15 +293,7 @@ function decreaseStrandIndex() {
         class="type-label max-w-xs text-center relative"
         :style="`color: ${selectedStrand.color}`"
       >
-        <inline-svg
-          :src="selectedStrand.logo"
-          @loaded=""
-          @unloaded=""
-          @error=""
-          width="150"
-          height="150"
-          class="mx-auto w-64"
-        ></inline-svg>
+        <img :src="selectedStrand.logo" class="mx-auto w-64" />
         <div class="absolute top-full pt-12 leading-normal">
           {{ selectedStrand.description }}
         </div>

@@ -241,6 +241,8 @@ function decreaseStrandIndex() {
 </script>
 
 <template>
+  <inline-svg hidden v-for="strand in strands" :src="strand.logo" />
+
   <div class="relative h-[calc(100vh-3.5rem)] bg-black">
     <h3
       class="type-small max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"

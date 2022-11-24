@@ -314,21 +314,25 @@ function decreaseStrandIndex() {
         </svg>
       </button>
 
-      <div
-        class="type-label max-w-xs text-center relative"
-        :style="`color: ${selectedStrand.color}`"
-      >
-        <div class="mx-auto w-64 h-40">
-          <inline-svg
-            :src="selectedStrand.logo"
-            :keepDuringLoading="false"
-            class="w-full h-auto"
-          />
+      <transition mode="out-in" name="slide-left">
+        <div
+          :key="selectedStrandIndex"
+          class="type-label max-w-xs text-center relative"
+          :style="`color: ${selectedStrand.color}`"
+        >
+          <div class="mx-auto w-64 h-40">
+            <inline-svg
+              :src="selectedStrand.logo"
+              :keepDuringLoading="false"
+              class="w-full h-auto"
+            />
+          </div>
+
+          <div class="absolute top-full pt-12 leading-normal">
+            {{ selectedStrand.description }}
+          </div>
         </div>
-        <div class="absolute top-full pt-12 leading-normal">
-          {{ selectedStrand.description }}
-        </div>
-      </div>
+      </transition>
     </div>
 
     <div

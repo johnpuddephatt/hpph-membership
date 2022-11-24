@@ -246,6 +246,7 @@ function decreaseStrandIndex() {
   <div class="relative h-[calc(100vh-3.5rem)] bg-black">
     <h3
       class="type-small max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
+      :class="{ 'hidden lg:block': selectedStrandIndex }"
     >
       HPPH will return Spring 2023.<br /><a
         href="https://hydeparkpicturehouse.co.uk"
@@ -274,7 +275,7 @@ function decreaseStrandIndex() {
       class="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <button
-        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 -mt-4 absolute z-40"
+        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-4 absolute z-40"
         @click="increaseStrandIndex"
         aria-label="Go to previous strand"
       >
@@ -295,7 +296,7 @@ function decreaseStrandIndex() {
         </svg>
       </button>
       <button
-        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute -mt-4 rounded-full z-40"
+        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-4 rounded-full z-40"
         @click="decreaseStrandIndex"
         aria-label="Go to next strand"
       >
@@ -319,7 +320,7 @@ function decreaseStrandIndex() {
       <transition mode="out-in" name="slide-left">
         <div
           :key="selectedStrandIndex"
-          class="type-label max-w-xs text-center relative"
+          class="type-label max-w-xs text-center lg:relative"
           :style="`color: ${selectedStrand.color}`"
         >
           <div class="mx-auto w-64 h-40">
@@ -330,7 +331,9 @@ function decreaseStrandIndex() {
             />
           </div>
 
-          <div class="absolute top-full pt-12 leading-normal">
+          <div
+            class="absolute bottom-[40vh] lg:bottom-0 lg:top-full pt-12 leading-normal"
+          >
             {{ selectedStrand.description }}
           </div>
         </div>

@@ -24,7 +24,7 @@ const strands = [
     angle: 3.5342917,
     color: "#B389FF",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/membership/f5aa960b-eb19-41b5-a48f-c1c36e4472d3.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/membership/tuesdaywonders.mp4",
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:

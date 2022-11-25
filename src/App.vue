@@ -34,7 +34,7 @@ const strands = [
     angle: 3.14159,
     color: "#FD4AC2",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/creatures.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/creaturesofthenight.mp4",
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
@@ -70,6 +70,8 @@ const strands = [
     angle: 0.3926991,
     color: "#FE9BA4",
     name: "Cinema Africa!",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/cinemaafrica.mp4",
     logo: "logos/CinemaAfrica.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",

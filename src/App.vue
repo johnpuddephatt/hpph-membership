@@ -407,8 +407,8 @@ function decreaseStrandIndex() {
   </div>
 
   <div class="bg-black py-20 container px-4 text-white text-center">
-    <p class="type-label pt-6 pb-2">Membership</p>
-    <h2 class="type-h4">Package &amp; Benefits</h2>
+    <p class="type-label pt-6 pb-2">HPPH</p>
+    <h2 class="type-h4">Memberships</h2>
 
     <div class="mt-24 grid lg:grid-cols-3 gap-4">
       <div v-for="membership in memberships" class="flex flex-col">
@@ -446,12 +446,12 @@ function decreaseStrandIndex() {
         >
           Sign-up here
         </a>
-        <a
+        <!-- <a
           :href="membership.gift_link"
           class="type-subtitle bg-gray-dark text-center py-6 text-white"
         >
           Purchase as a gift
-        </a>
+        </a> -->
       </div>
     </div>
   </div>

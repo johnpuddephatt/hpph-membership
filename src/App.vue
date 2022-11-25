@@ -24,7 +24,7 @@ const strands = [
     angle: 3.5342917,
     color: "#B389FF",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/membership/tuesdaywonders.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/membership/tuesdaywonders2.mp4",
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
@@ -89,7 +89,7 @@ const strands = [
     color: "#6EFF69",
     name: "Memory Matinees",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/memorymatinees.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/memorymatinees2.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",

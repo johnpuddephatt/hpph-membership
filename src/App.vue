@@ -80,6 +80,8 @@ const strands = [
     angle: 0,
     color: "#45CDFF",
     name: "Bring Your Own Baby",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669480242/membership/byob-loop.mp4",
     logo: "logos/BYOB.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -99,7 +101,7 @@ const strands = [
     color: "#FEAD52",
     name: "Hyde & Seek",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/hydeandseek.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669480285/membership/hydeseek-loop.mp4",
     logo: "logos/Hyde&Seek.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",

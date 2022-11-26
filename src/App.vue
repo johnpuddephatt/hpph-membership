@@ -24,7 +24,7 @@ const strands = [
     angle: 3.5342917,
     color: "#B389FF",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/membership/tuesdaywonders2.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669461993/membership/tuesdaywonders-loop.mp4",
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
@@ -34,7 +34,7 @@ const strands = [
     angle: 3.14159,
     color: "#FD4AC2",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/creaturesofthenight.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462984/membership/creatures2-loop.mp4",
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
@@ -71,7 +71,7 @@ const strands = [
     color: "#FE9BA4",
     name: "Cinema Africa!",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/cinemaafrica.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462006/membership/cinemaafrica-loop.mp4",
     logo: "logos/CinemaAfrica.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -89,7 +89,7 @@ const strands = [
     color: "#6EFF69",
     name: "Memory Matinees",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669299504/membership/memorymatinees2.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462024/membership/memorymatinees-loop.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",

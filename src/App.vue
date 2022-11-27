@@ -44,6 +44,8 @@ const strands = [
     angle: 2.7488936,
     color: "#A0F0CB",
     name: "Re-run",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575492/membership/rerun-loop.mp4",
     logo: "logos/ReRun.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -52,6 +54,8 @@ const strands = [
     angle: 2.35619,
     color: "#E5E3BF",
     name: "Philosophy &amp; Film",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575101/membership/philosophyfilm-loop.mp4",
     logo: "logos/PhilosophyFilm.svg",
     description:
       "?For people crazy about documentaries that explore the many wonders of the world",
@@ -81,7 +85,7 @@ const strands = [
     color: "#45CDFF",
     name: "Bring Your Own Baby",
     video:
-      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669480242/membership/byob-loop.mp4",
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669574851/membership/byob-loop2.mp4",
     logo: "logos/BYOB.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
@@ -264,7 +268,7 @@ function decreaseStrandIndex() {
       :key="selectedStrand.video"
       v-if="selectedStrand.video"
       class="inset-0 absolute transition duration-1000 w-full h-full object-cover object-center"
-      :class="{ 'opacity-50': playing, 'opacity-0': !playing }"
+      :class="{ 'opacity-70': playing, 'opacity-0': !playing }"
       @playing="playing = true"
       autoplay=""
       preload=""

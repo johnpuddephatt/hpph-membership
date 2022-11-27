@@ -16,13 +16,13 @@ function onKeydown(event) {
 const strands = [
   {
     angle: 3.92699,
-    color: "#FFD93C",
+    color: "#FFDA3D",
     name: "Hyde Park Picture House",
     logo: "logos/HPPH.svg",
   },
   {
     angle: 3.5342917,
-    color: "#B389FF",
+    color: "#B38AFF",
     video:
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669461993/membership/tuesdaywonders-loop.mp4",
     name: "Tuesday Wonders",
@@ -63,9 +63,9 @@ const strands = [
 
   {
     angle: 0.785398,
-    color: "#f2acd7",
-    name: "Bad Film Theory",
-    logo: "logos/bad-film-theory.svg",
+    color: "#ff3e51",
+    name: "Pavilion Presents",
+    logo: "logos/PavilionPresents.svg",
     description:
       "For people crazy about documentaries that explore the many wonders of the world",
   },

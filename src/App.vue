@@ -417,7 +417,7 @@ function decreaseStrandIndex() {
         class="w-full max-w-lg mx-auto md:w-1/3 aspect-video rounded-lg bg-gray-light"
       ></div>
       <div class="flex-1">
-        <h2 class="font-bold text-4xl mb-4">
+        <h2 class="type-h4 mb-4">
           Looking for a special gift for your favourite film lover?
         </h2>
         <p>

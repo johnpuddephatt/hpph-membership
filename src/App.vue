@@ -410,8 +410,12 @@ function decreaseStrandIndex() {
     </div>
   </div>
   <div class="bg-gray">
-    <div class="container max-w-5xl py-24 flex flex-row items-center gap-16">
-      <div class="w-1/3 aspect-video rounded-lg bg-gray-light"></div>
+    <div
+      class="container px-4 max-w-5xl text-center md:text-left py-24 flex flex-col md:flex-row items-center gap-16"
+    >
+      <div
+        class="w-full max-w-lg mx-auto md:w-1/3 aspect-video rounded-lg bg-gray-light"
+      ></div>
       <div class="flex-1">
         <h2 class="font-bold text-4xl mb-4">
           Looking for a special gift for your favourite film lover?

@@ -28,7 +28,7 @@ const strands = [
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "Astounding, illuminating and inspiring documentaries, exploring our wide and wonderful world.",
   },
   {
     angle: 3.14159,
@@ -38,17 +38,17 @@ const strands = [
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "From iconic horror and sci-fi, to obscure cult delights – all shown during those most magical of late-night hours.",
   },
   {
     angle: 2.7488936,
     color: "#A0F0CB",
-    name: "Re-run",
+    name: "ReRun",
     video:
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575492/membership/rerun-loop.mp4",
     logo: "logos/ReRun.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "Revisit some of the greatest classics of the 20th century – with  dazzling restorations and rare 35mm performances.",
   },
   {
     angle: 2.35619,
@@ -58,7 +58,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575101/membership/philosophyfilm-loop.mp4",
     logo: "logos/PhilosophyFilm.svg",
     description:
-      "?For people crazy about documentaries that explore the many wonders of the world",
+      "Exploring the philosophical questions raised by some of cinema’s most fascinating films – with Joe Saunders.",
   },
 
   {
@@ -78,7 +78,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462006/membership/cinemaafrica-loop.mp4",
     logo: "logos/CinemaAfrica.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "The best new and intriguing African cinema, supported by Leeds African Communities Trust.",
   },
   {
     angle: 0,
@@ -88,7 +88,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669574851/membership/byob-loop2.mp4",
     logo: "logos/BYOB.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "Allowing parents and carers enjoy the best new releases, without leaving the little one at home.",
   },
   {
     angle: -0.3926991,
@@ -98,7 +98,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462024/membership/memorymatinees-loop.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "Safe and inclusive screenings, helping those living with dementia reconnect with memories through film.",
   },
   {
     angle: -0.785398,
@@ -108,7 +108,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669480285/membership/hydeseek-loop.mp4",
     logo: "logos/Hyde&Seek.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "The home of family-friendly movies, from magnificent animations to spellbinding classics.",
   },
 ];
 
@@ -388,29 +388,41 @@ function decreaseStrandIndex() {
   >
     <div class="container max-w-5xl text-center mx-auto px-4">
       <p class="type-label pt-6 pb-12">Memberships</p>
-      <h2 class="type-h5 lg:type-h3 pb-24 max-w-sm lg:max-w-4xl mx-auto">
+      <h2 class="type-h5 lg:type-h3 pb-12 max-w-sm lg:max-w-4xl mx-auto">
         As we prepare to reopen this spring, we’re excited to launch our new
         HPPH Memberships.
       </h2>
+
+      <div class="container max-w-2xl text-center mx-auto px-4 pb-16 space-y-6">
+        <p>
+          HPPH members not only get to save money and enjoy exclusive benefits,
+          but they also help us deliver even more accessible screenings for
+          those in our community.
+        </p>
+
+        <p>
+          With all new yearly memberships kicking in from the day the cinema
+          reopens – and the first 500 members also receiving a limited edition
+          pin badge – now’s the perfect time to join, as we prepare to reopen
+          our doors.
+        </p>
+      </div>
     </div>
   </div>
   <div class="bg-gray">
-    <div class="container max-w-3xl text-center mx-auto px-4 py-16 space-y-6">
-      <p>
-        HPPH Members will not only enjoy loads of great benefits, but they’ll
-        also help us deliver even more accessible screenings – so everyone in
-        our communtiy can experience the magic of cinema.
-      </p>
-      <p>
-        Lasting 12 months from the day the cinema reopens, HPPH Memberships will
-        help audiences save money thanks to free and discounted tickets, money
-        off food and drink and other exclusive offers.
-      </p>
-      <p>
-        With limited-edition pin badges given out to the first 500 members –
-        whether it’s for yourself or as a gift for a loved one this Christmas –
-        now’s the perfect time to become a HPPH Member.
-      </p>
+    <div class="container max-w-5xl py-24 flex flex-row items-center gap-16">
+      <div class="w-1/3 aspect-video rounded-lg bg-gray-light"></div>
+      <div class="flex-1">
+        <h2 class="font-bold text-4xl mb-4">
+          Looking for a special gift for your favourite film lover?
+        </h2>
+        <p>
+          Memberships can also be bought as gifts this festive season, and we’ll
+          even send you a pin badge and postcard in the post, so you have
+          something special to pass on at Christmas. See our FAQ section below
+          for more details.
+        </p>
+      </div>
     </div>
   </div>
 

@@ -28,7 +28,7 @@ const strands = [
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
-      "Astounding, illuminating and inspiring documentaries, exploring our wide and wonderful world.",
+      "Illuminating & inspiring documentaries, exploring our wide & wonderful world.",
   },
   {
     angle: 3.14159,
@@ -38,7 +38,7 @@ const strands = [
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
-      "From iconic horror and sci-fi, to obscure cult delights – all shown during those most magical of late-night hours.",
+      "From iconic sci-fi & horror, to obscure cult delights – shown during those magical late-night hours.",
   },
   {
     angle: 2.7488936,
@@ -48,7 +48,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575492/membership/rerun-loop.mp4",
     logo: "logos/ReRun.svg",
     description:
-      "Revisit some of the greatest classics of the 20th century – with  dazzling restorations and rare 35mm performances.",
+      "Cinema’s greatest classics revisited – with dazzling restorations and rare 35mm presentations.",
   },
   {
     angle: 2.35619,
@@ -58,7 +58,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575101/membership/philosophyfilm-loop.mp4",
     logo: "logos/PhilosophyFilm.svg",
     description:
-      "Exploring the philosophical questions raised by some of cinema’s most fascinating films – with Joe Saunders.",
+      "Exploring the philosophical questions raised by some of cinema’s most fascinating films.",
   },
 
   {
@@ -88,7 +88,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669574851/membership/byob-loop2.mp4",
     logo: "logos/BYOB.svg",
     description:
-      "Allowing parents and carers enjoy the best new releases, without leaving the little one at home.",
+      "A relaxed and welcoming space for parents to enjoy the best new films with their little ones.",
   },
   {
     angle: -0.3926991,
@@ -98,7 +98,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462024/membership/memorymatinees-loop.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
-      "Safe and inclusive screenings, helping those living with dementia reconnect with memories through film.",
+      "Inclusive screenings, helping those living with dementia reconnect with memories through film.",
   },
   {
     angle: -0.785398,
@@ -401,10 +401,9 @@ function decreaseStrandIndex() {
         </p>
 
         <p>
-          With all new yearly memberships kicking in from the day the cinema
-          reopens – and the first 500 members also receiving a limited edition
-          pin badge – now’s the perfect time to join, as we prepare to reopen
-          our doors.
+          With all new memberships kicking in the day the cinema reopens – and
+          the first 500 members also receiving a limited-edition pin badge –
+          now’s the perfect time to join.
         </p>
       </div>
     </div>
@@ -418,10 +417,10 @@ function decreaseStrandIndex() {
       ></div>
       <div class="flex-1">
         <h2 class="type-h4 mb-4">
-          Looking for a special gift for your favourite film lover?
+          A special gift for your favourite film lover.
         </h2>
         <p>
-          Memberships can also be bought as gifts this festive season, and we’ll
+          Memberships can also be bought as gifts this festive season. We'll
           even send you a pin badge and postcard in the post, so you have
           something special to pass on at Christmas. See our FAQ section below
           for more details.

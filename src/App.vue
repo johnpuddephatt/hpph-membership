@@ -65,9 +65,11 @@ const strands = [
     angle: 0.785398,
     color: "#ff3e51",
     name: "Pavilion Presents",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669819441/membership/pavillionpresents-loop.mp4",
     logo: "logos/PavilionPresents.svg",
     description:
-      "For people crazy about documentaries that explore the many wonders of the world",
+      "International artists’ moving image – a cinema of boundless experimentation, provocation & vision.",
   },
 
   {

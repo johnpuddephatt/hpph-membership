@@ -28,7 +28,7 @@ const strands = [
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
-      "Illuminating & inspiring documentaries, exploring our wide & wonderful world.",
+      "Astounding, illuminating & inspiring documentaries, exploring our weird & wonderful world.",
   },
   {
     angle: 3.14159,
@@ -38,7 +38,7 @@ const strands = [
     name: "Creatures of the night",
     logo: "logos/CreatureoftheNight.svg",
     description:
-      "From iconic sci-fi & horror, to obscure cult delights – shown during those magical late-night hours.",
+      "From iconic sci-fi & horror, to obscure cult delights, all shown during those most magical of late-night hours.",
   },
   {
     angle: 2.7488936,
@@ -48,7 +48,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669575492/membership/rerun-loop.mp4",
     logo: "logos/ReRun.svg",
     description:
-      "Cinema’s greatest classics revisited – with dazzling restorations and rare 35mm presentations.",
+      "Cinema’s greatest classics revisited – with dazzling restorations & rare 35mm presentations.",
   },
   {
     angle: 2.35619,
@@ -69,7 +69,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669819441/membership/pavillionpresents-loop.mp4",
     logo: "logos/PavilionPresents.svg",
     description:
-      "International artists’ moving image – a cinema of boundless experimentation, provocation & vision.",
+      "International artists’ moving image – boundless experimentation, political provocation & personal vision.",
   },
 
   {
@@ -90,7 +90,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669574851/membership/byob-loop2.mp4",
     logo: "logos/BYOB.svg",
     description:
-      "A relaxed and welcoming space for parents to enjoy the best new films with their little ones.",
+      "A relaxed & regular chance for parents to enjoy the best new films with their little ones.",
   },
   {
     angle: -0.3926991,
@@ -100,7 +100,7 @@ const strands = [
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669462024/membership/memorymatinees-loop.mp4",
     logo: "logos/MemoryMatinees.svg",
     description:
-      "Inclusive screenings, helping those living with dementia reconnect with memories through film.",
+      "Supporting those living with dementia reconnect with memories through film.",
   },
   {
     angle: -0.785398,
@@ -144,24 +144,16 @@ const faqs = [
 const benefits = [
   "HPPH Membership",
   "Free tickets",
-
-  "HPPH Membership",
   "Food/drink discount",
-
   "HPPH Membership",
+  "Free tickets",
   "Priority booking",
-
   "HPPH Membership",
   "Members’ newsletter",
-
-  "HPPH Membership",
   "Ticket discount",
-
-  "HPPH Membership",
-  "Limited-edition pin-badge",
-
   "HPPH Membership",
   "Three months free MUBI",
+  "Limited-edition pin-badge",
 ];
 
 const memberships = [
@@ -253,7 +245,7 @@ function decreaseStrandIndex() {
 <template>
   <inline-svg hidden v-for="strand in strands" :src="strand.logo" />
 
-  <div class="relative h-[calc(100vh-3.5rem)] bg-black">
+  <div class="h-header relative bg-black">
     <h3
       class="type-small max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
       :class="{ 'hidden lg:block': selectedStrandIndex }"
@@ -412,16 +404,14 @@ function decreaseStrandIndex() {
   </div>
   <div class="bg-gray">
     <div
-      class="container px-4 max-w-5xl text-center md:text-left py-24 flex flex-col md:flex-row items-center gap-16"
+      class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-12"
     >
-      <div
-        class="w-full max-w-lg mx-auto md:w-1/3 aspect-video rounded-lg bg-gray-light"
-      ></div>
+      <img src="/images/pin-badge.png" alt="" class="max-w-lg mx-auto" />
       <div class="flex-1">
         <h2 class="type-h4 mb-4">
           A special gift for your favourite film lover.
         </h2>
-        <p>
+        <p class="max-w-xl mx-auto">
           Memberships can also be bought as gifts this festive season. We'll
           even send you a pin badge and postcard in the post, so you have
           something special to pass on at Christmas. See our FAQ section below
@@ -435,7 +425,7 @@ function decreaseStrandIndex() {
     <p class="type-label pt-6 pb-2">HPPH</p>
     <h2 class="type-h4">Memberships</h2>
 
-    <div class="mt-24 grid lg:grid-cols-3 gap-4">
+    <div class="mt-24 grid lg:grid-cols-3 gap-12 lg:gap-4">
       <div v-for="membership in memberships" class="flex flex-col">
         <div class="relative">
           <img class="aspect-[4/3]" :src="membership.image" />
@@ -481,7 +471,9 @@ function decreaseStrandIndex() {
     </div>
   </div>
 
-  <div class="bg-black py-36 text-center px-4 relative overflow-x-hidden">
+  <div
+    class="bg-black py-20 lg:py-36 text-center px-4 relative overflow-x-hidden"
+  >
     <img
       src="/images/1625-placeholder.jpg"
       alt=""
@@ -541,7 +533,7 @@ function decreaseStrandIndex() {
         <span
           class="inline-block"
           v-for="(benefit, key) in benefits.concat(benefits).concat(benefits)"
-          ><span :class="{ 'font-bold': !(key % 2) }">{{ benefit }}</span
+          ><span :class="{ 'font-bold': !(key % 3) }">{{ benefit }}</span
           >&nbsp;&bullet;&nbsp;
         </span>
       </div>
@@ -554,9 +546,9 @@ function decreaseStrandIndex() {
       <div class="divide-y divide-gray-dark">
         <details v-for="faq in faqs">
           <summary
-            class="lg:type-subtitle leading-tight font-bold py-6 flex justify-between gap-2"
+            class="lg:type-subtitle focus-visible:outline-none focus:outline-none focus:bg-white focus:bg-opacity-10 leading-tight font-bold py-6 flex justify-between gap-2"
           >
-            {{ faq.summary }}
+            <div>{{ faq.summary }}</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="23"

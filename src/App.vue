@@ -325,7 +325,7 @@ function decreaseStrandIndex() {
           class="type-label max-w-xs text-center lg:relative"
           :style="`color: ${selectedStrand.color}`"
         >
-          <div class="mx-auto w-64 h-40">
+          <div class="mx-auto lg:w-64 w-48 h-32 lg:h-40">
             <inline-svg
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
@@ -334,7 +334,7 @@ function decreaseStrandIndex() {
           </div>
 
           <div
-            class="absolute bottom-[40vh] lg:bottom-0 lg:top-full pt-12 leading-normal"
+            class="absolute bottom-[35vh] lg:bottom-0 lg:top-full pt-12 leading-normal"
           >
             {{ selectedStrand.description }}
           </div>
@@ -404,9 +404,9 @@ function decreaseStrandIndex() {
   </div>
   <div class="bg-gray">
     <div
-      class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-12"
+      class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-8"
     >
-      <img src="/images/pin-badge.png" alt="" class="max-w-lg mx-auto" />
+      <img src="/images/pin-badge.png" alt="" class="w-48 mx-auto" />
       <div class="flex-1">
         <h2 class="type-h4 mb-4">
           A special gift for your favourite film lover.
@@ -425,7 +425,7 @@ function decreaseStrandIndex() {
     <p class="type-label pt-6 pb-2">HPPH</p>
     <h2 class="type-h4">Memberships</h2>
 
-    <div class="mt-24 grid lg:grid-cols-3 gap-12 lg:gap-4">
+    <div class="mt-24 grid lg:grid-cols-3 gap-16 lg:gap-4">
       <div v-for="membership in memberships" class="flex flex-col">
         <div class="relative">
           <img class="aspect-[4/3]" :src="membership.image" />
@@ -449,7 +449,7 @@ function decreaseStrandIndex() {
         <ul class="flex-grow bg-[#E6E4DC]">
           <li
             v-for="(benefit, key) in membership.benefits"
-            class="type-label text-black text-center py-8"
+            class="type-label text-black text-center py-3 lg:py-8"
             :class="{ 'bg-gray': key % 2 }"
           >
             {{ benefit }}
@@ -471,14 +471,19 @@ function decreaseStrandIndex() {
     </div>
   </div>
 
-  <div
-    class="bg-black py-20 lg:py-36 text-center px-4 relative overflow-x-hidden"
-  >
-    <img
-      src="/images/1625-placeholder.jpg"
-      alt=""
-      class="mt-4 absolute top-1/2 left-1/2 transform -translate-y-1/2"
-    />
+  <div class="py-20 lg:py-36 text-center px-4 relative overflow-x-hidden">
+    <video
+      class="z-[-1] bg-black inset-0 absolute transition duration-1000 w-full h-full object-cover object-center"
+      loop="true"
+      muted="true"
+      autoplay="true"
+    >
+      <source
+        type="video/mp4"
+        src="https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1669979896/membership/16-25.mp4"
+      />
+    </video>
+
     <h2 class="type-h5 lg:type-h4 text-white mb-4">Are you aged 15–25?</h2>
     <p class="type-label mb-24 text-white">
       Join our free membership for £5 tickets

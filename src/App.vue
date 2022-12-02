@@ -117,27 +117,43 @@ const strands = [
 const faqs = [
   {
     summary: "Is HPPH Membership different to the Friends of Hyde Park?",
-    details: "These are the details here like this.",
+    details:
+      "<p>Until now the only membership scheme affiliated with the Hyde Park Picture House has been run by the Friends of Hyde Park Picture House, a separate Charity from the cinema itself.</p><p>To better reflect how membership at the Picture House is administered, and to ensure it can be properly integrated with the cinema’s operations and marketing activity, it was agreed that the cinema would establish its own membership scheme. This also allows the Friends to better decide how they want to work to meet their own charitable purposes.</p><p>This new scheme will run alongside Friends membership scheme, which is set to continue post re-opening, though it will will work a little differently including operating on a Pay What you Decide model and no longer offering ticket discounts for the cinema as it once did. Our relationship with the Friends is still incredibly important to the Cinema and we’d encourage you to join the Friends if you’re interested in getting more involved with exploring and celebrating the cinema’s heritage, and would like to play a role in influencing the future direction and development of the Picture House, into a vibrant multicultural community resource.</p><p>The Friends of Hyde Park Picture House are due to announce details of their updated remit and membership scheme this winter. For the very latest on this, visit their website: <a class='underline' target='_blank' href='http://friendsofhpph.org'>friendsofhpph.org/faq</a></p>",
   },
   {
     summary: "How will becoming a member support my community?",
-    details: "These are the details here like this.",
+    details:
+      "<p>Thanks to the support of members, we’re able to deliver even more accessible screenings, helping more of our community visit the Picture House.</p><p>Accessible screenings typically cost the Picture House additional money to deliver, money which we’re able to draw upon from membership fees. This means members are directly supporting us deliver the following screenings:</p><ul class='ml-4 list-disc'><li>Memory Matinees – for audiences living with dementia & their families.</li><li>Relaxed Screenings – for audiences who find conventional screenings more challenging.</li><li>BYOBaby screenings – for parents/carers & their little ones.</li><li>Pay What You Can screenings – for audiences who face financial barriers.</li></ul>",
   },
   {
     summary: "When will my membership begin and expire?",
-    details: "These are the details here like this.",
+    details:
+      "<p>Memberships begin the moment they are purchased, and benefits such as free tickets and ticket discounts can be enjoyed straight away – including at off-site screenings before the cinema reopens.</p><p>All memberships bought prior to reopening will expire 12 months after the cinema first opens its doors, meaning everyone will get to enjoy membership for a whole year of the Picture House being fully open again.</p>",
+  },
+  {
+    summary: "How can I get my pin-badge?",
+    details:
+      "<p>For the first 500 new members, we’ll be posting out a limited-edition pin badges and postcards. These will be sent to all new members, as well as those purchase gift membership. Before Christmas, we will post the pins via Royal Mail 2nd class on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within 7 days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit. </p>",
+  },
+  {
+    summary: "How does gift membership work?",
+    details:
+      "<p>If you decide to buy membership as a gift, you can choose for us to email a gift code either to yourself or your loved one, with the option of selecting a date for when the email is sent. To redeem the gift code, the person will then need to <a target='_blank' class='underline' href='https://hydeparkpicturehouse.co.uk/membership'>visit our website’s membership pages</a>, select their membership, add it to their basket and proceed through checkout. During checkout, they’ll be able to add the gift code which will discount their membership to £0.</p><p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards, which you can pass on to your loved one as part of your gift to them. We will only be posting these to whoever bought memberships, on the 16th December. People who then go on to buy memberships using their gift code will not be sent a pin badge.</p>",
   },
   {
     summary: "Why are there no more membership cards?",
-    details: "These are the details here like this.",
+    details:
+      "<p>In a change from the previous Friends of Hyde Park Picture House scheme, we’ll no longer be issuing membership cards. The primary motivation for this is sustainability – as the previous cards needed to be laminated. Instead, members can enjoy membership benefits by logging into their account and purchasing tickets online, or by providing their name when they buy any tickets or food/drink at the cinema itself. This means members can continue to enjoy benefits even if they lose their card.</p>",
   },
   {
-    summary: "Why are you no longer posting programmes?",
-    details: "These are the details here like this.",
+    summary: "Why are you no longer posting film guides?",
+    details:
+      "<p>Posting our monthly film guides to all members was always an extremely costly and time-consuming process. It was also something many members asked us not to do, as they didn't engage in our listings in this way and felt it was a waste of time and money.</p><p>By no longer posting all guides out, we’re able to introduce other benefits such as free tickets and discounts on food/drink. It also reduces the cinema’s environmental impact, by reducing the number of deliveries and programmes needing to be produced.</p><p>Film guides will still be produced when the cinema reopens, and available to collect from the cinema as well as a number of locations around the city. For anyone who struggles to access our listings online, and wholly relies on the film guide for their information, we will be looking at ways we can continue sending guides to those who need them.</p>",
   },
   {
     summary: "What is auto-renew?",
-    details: "These are the details here like this.",
+    details:
+      "<p>We’ve now introduced the option for your HPPH Membership to automatically-renew every year.</p><p>For anyone who opts for auto-renew when purchasing their membership, we will send you a reminder 14 days before your membership is set to auto-renew. Renewal payment will then be taken 7 days before your membership is due to expire, to prevent there from being any lapse in your membership.</p><p>Automatic renewal can be turned off at any time via your online account, or by contacting our box office.</p>",
   },
 ];
 
@@ -557,7 +573,7 @@ function decreaseStrandIndex() {
       <div class="divide-y divide-gray-dark">
         <details v-for="faq in faqs">
           <summary
-            class="lg:type-subtitle focus-visible:outline-none focus:outline-none focus:bg-white focus:bg-opacity-10 leading-tight font-bold py-6 flex justify-between gap-2"
+            class="lg:type-subtitle px-2 focus-visible:outline-none focus:outline-none focus:bg-white focus:bg-opacity-10 leading-tight font-bold py-6 flex justify-between gap-2"
           >
             <div>{{ faq.summary }}</div>
             <svg
@@ -576,9 +592,10 @@ function decreaseStrandIndex() {
               </g>
             </svg>
           </summary>
-          <div class="container">
-            {{ faq.details }}
-          </div>
+          <div
+            class="prose container space-y-3 pt-6 max-w-lg ml-2"
+            v-html="faq.details"
+          ></div>
         </details>
       </div>
     </div>

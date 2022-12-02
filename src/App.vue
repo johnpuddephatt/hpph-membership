@@ -28,7 +28,7 @@ const strands = [
     name: "Tuesday Wonders",
     logo: "logos/TuesdayWonders.svg",
     description:
-      "Astounding, illuminating & inspiring documentaries, exploring our weird & wonderful world.",
+      "Illuminating & inspiring documentaries, exploring our weird & wonderful world.",
   },
   {
     angle: 3.14159,
@@ -160,7 +160,7 @@ const memberships = [
   {
     explainer:
       "Are you unable to visit regularly but keen to support the work we do? This membership is for you.",
-    image: "/images/16mm.png",
+    image: "/images/16mm.jpg",
     logo: "/logos/16MM.svg",
     price: "16",
     benefits: [
@@ -175,7 +175,7 @@ const memberships = [
   {
     explainer:
       "Do you expect to buy four or more tickets a year? This membership will save you money.",
-    image: "/images/35mm.png",
+    image: "/images/35mm.jpg",
     logo: "/logos/35MM.svg",
     price: "35",
     benefits: [
@@ -193,7 +193,7 @@ const memberships = [
   {
     explainer:
       "Do you expect to buy eight or more tickets a year? This membership will save you even more money.",
-    image: "/images/70mm.png",
+    image: "/images/70mm.jpg",
     logo: "/logos/70MM.svg",
     price: "70",
     benefits: [
@@ -250,7 +250,7 @@ function decreaseStrandIndex() {
       class="type-small max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
       :class="{ 'hidden lg:block': selectedStrandIndex }"
     >
-      HPPH will return Spring 2023.<br /><a
+      HPPH will return April 2023.<br /><a
         href="https://hydeparkpicturehouse.co.uk"
         target="_blank"
         class="underline"
@@ -277,7 +277,7 @@ function decreaseStrandIndex() {
       class="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <button
-        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-6 absolute z-40"
+        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-3 absolute z-40"
         @click="increaseStrandIndex"
         aria-label="Go to previous strand"
       >
@@ -298,7 +298,7 @@ function decreaseStrandIndex() {
         </svg>
       </button>
       <button
-        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-6 rounded-full z-40"
+        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-2.5 rounded-full z-40"
         @click="decreaseStrandIndex"
         aria-label="Go to next strand"
       >
@@ -325,7 +325,7 @@ function decreaseStrandIndex() {
           class="type-label max-w-xs text-center lg:relative"
           :style="`color: ${selectedStrand.color}`"
         >
-          <div class="mx-auto lg:w-64 w-60 h-36 lg:h-40">
+          <div class="mx-auto lg:w-64 w-60 h-36 mt-6 lg:h-40">
             <inline-svg
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
@@ -406,7 +406,6 @@ function decreaseStrandIndex() {
     <div
       class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-8"
     >
-      <img src="/images/pin-badge.png" alt="" class="w-32 h-auto mx-auto" />
       <div class="flex-1">
         <h2 class="type-h4 mb-4">
           A special gift for your favourite film lover.
@@ -418,6 +417,7 @@ function decreaseStrandIndex() {
           for more details.
         </p>
       </div>
+      <img src="/images/pin-badge.png" alt="" class="w-32 h-auto mx-auto" />
     </div>
   </div>
 
@@ -425,17 +425,17 @@ function decreaseStrandIndex() {
     <p class="type-label pt-6 pb-2">HPPH</p>
     <h2 class="type-h4">Memberships</h2>
 
-    <div class="mt-24 grid lg:grid-cols-3 gap-16 lg:gap-4">
+    <div class="mt-8 grid lg:grid-cols-3 gap-16 lg:gap-4">
       <div v-for="membership in memberships" class="flex flex-col">
         <div class="relative">
-          <img class="aspect-[4/3]" :src="membership.image" />
+          <img class="" :src="membership.image" />
 
           <img
             :src="membership.logo"
             class="w-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           />
 
-          <div class="right-0 absolute bottom-0 left-0">
+          <div class="right-0 absolute bottom-4 left-0">
             <div class="type-label max-w-xs mx-auto mb-4 !leading-normal">
               {{ membership.explainer }}
             </div>

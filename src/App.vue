@@ -277,7 +277,7 @@ function decreaseStrandIndex() {
       class="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <button
-        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-4 absolute z-40"
+        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-6 absolute z-40"
         @click="increaseStrandIndex"
         aria-label="Go to previous strand"
       >
@@ -298,7 +298,7 @@ function decreaseStrandIndex() {
         </svg>
       </button>
       <button
-        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-4 rounded-full z-40"
+        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-6 rounded-full z-40"
         @click="decreaseStrandIndex"
         aria-label="Go to next strand"
       >
@@ -325,7 +325,7 @@ function decreaseStrandIndex() {
           class="type-label max-w-xs text-center lg:relative"
           :style="`color: ${selectedStrand.color}`"
         >
-          <div class="mx-auto lg:w-64 w-48 h-32 lg:h-40">
+          <div class="mx-auto lg:w-64 w-60 h-36 lg:h-40">
             <inline-svg
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
@@ -490,7 +490,7 @@ function decreaseStrandIndex() {
     </p>
 
     <div
-      class="border border-gray-medium rounded-lg p-12 w-full max-w-lg aspect-[441/278] mx-auto relative"
+      class="bg-black bg-opacity-25 backdrop-blur-sm border border-gray-medium rounded-lg p-12 w-full max-w-lg aspect-[441/278] mx-auto relative"
     >
       <inline-svg
         src="/logos/HPPH-1525.svg"
@@ -498,7 +498,7 @@ function decreaseStrandIndex() {
       ></inline-svg>
 
       <div
-        class="type-label absolute left-0 transform text-gray-medium top-1/2 -rotate-90 origin-center"
+        class="type-label absolute left-0 transform text-opacity-50 text-white top-1/2 -rotate-90 origin-center"
       >
         Member #001
       </div>

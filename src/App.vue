@@ -406,7 +406,7 @@ function decreaseStrandIndex() {
     <div
       class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-8"
     >
-      <img src="/images/pin-badge.png" alt="" class="w-48 mx-auto" />
+      <img src="/images/pin-badge.png" alt="" class="w-32 h-auto mx-auto" />
       <div class="flex-1">
         <h2 class="type-h4 mb-4">
           A special gift for your favourite film lover.

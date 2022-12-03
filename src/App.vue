@@ -17,6 +17,8 @@ const strands = [
   {
     angle: 3.92699,
     color: "#FFDA3D",
+    video:
+      "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1670092670/membership/HPPH-loop.mp4",
     name: "Hyde Park Picture House",
     logo: "logos/HPPH.svg",
   },
@@ -116,9 +118,10 @@ const strands = [
 
 const faqs = [
   {
-    summary: "Is HPPH Membership different to the Friends of Hyde Park?",
+    summary:
+      "How is this new membership scheme different to the old Friends one?",
     details:
-      "<p>Until now the only membership scheme affiliated with the Hyde Park Picture House has been run by the Friends of Hyde Park Picture House, a separate Charity from the cinema itself.</p><p>To better reflect how membership at the Picture House is administered, and to ensure it can be properly integrated with the cinema’s operations and marketing activity, it was agreed that the cinema would establish its own membership scheme. This also allows the Friends to better decide how they want to work to meet their own charitable purposes.</p><p>This new scheme will run alongside Friends membership scheme, which is set to continue post re-opening, though it will will work a little differently including operating on a Pay What you Decide model and no longer offering ticket discounts for the cinema as it once did. Our relationship with the Friends is still incredibly important to the Cinema and we’d encourage you to join the Friends if you’re interested in getting more involved with exploring and celebrating the cinema’s heritage, and would like to play a role in influencing the future direction and development of the Picture House, into a vibrant multicultural community resource.</p><p>The Friends of Hyde Park Picture House are due to announce details of their updated remit and membership scheme this winter. For the very latest on this, visit their website: <a class='underline' target='_blank' href='http://friendsofhpph.org'>friendsofhpph.org/faq</a></p>",
+      "<p>Until now the only membership scheme affiliated with the cinema has been run by the Friends of Hyde Park Picture House, a separate charity from the Picture House itself. To better reflect how membership at the Picture House is administered, and to ensure it can be properly integrated with the cinema’s operations and marketing activity, it was agreed that the cinema would establish its own membership scheme. This would also allow the Friends to better decide how they want to work to meet their own charitable purposes.</p><p>This new membership scheme will run alongside a Friends membership scheme, which is set to continue post re-opening, though it will work a little differently including operating on a Pay What you Decide model and no longer offering ticket discounts for the cinema as it once did.</p><p>Our relationship with the Friends is still incredibly important to the cinema and we’d encourage you to join the Friends if you’re interested in getting more involved with exploring and celebrating the cinema’s heritage, and would like to play a role in influencing the future direction and development of the Picture House, into a vibrant multicultural community resource.</p><p>The Friends of Hyde Park Picture House are due to announce details of their updated remit and membership scheme this winter. For the very latest on this, visit their website: <a class='underline' target='_blank' href='http://friendsofhpph.org/faq'>friendsofhpph.org/faq</a></p>",
   },
   {
     summary: "How will becoming a member support my community?",

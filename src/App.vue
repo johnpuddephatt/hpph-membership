@@ -136,12 +136,12 @@ const faqs = [
   {
     summary: "How can I get my pin-badge?",
     details:
-      "<p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards. These will be sent to all new members, as well as those who purchase gift membership.</p><p>Before Christmas, we’ll post the pins via Royal Mail 2nd class on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within 7 days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit.</p>",
+      "<p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards. These will be sent to all new members, as well as those who purchase a gift membership.</p><p>If you’d like to receive your pin before Christmas, you’ll need to have placed your order by 15th December, for the last guaranteed post on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within seven days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit.</p>",
   },
   {
     summary: "How does gift membership work?",
     details:
-      "<p>If you decide to buy membership as a gift, you can choose for us to email a gift code either to yourself or your loved one, with the option of selecting a date for when the email is sent. To redeem the gift code, the person will then need to <a target='_blank' class='underline' href='https://hydeparkpicturehouse.co.uk/membership'>visit our website’s membership pages</a>, select their membership, add it to their basket and proceed through checkout. During checkout, they’ll be able to add the gift code which will discount their membership to £0.</p><p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards, which you can pass on to your loved one as part of your gift to them. We will only be posting these to whoever bought memberships, on the 16th December. People who then go on to buy memberships using their gift code will not be sent a pin badge.</p>",
+      "<p>If you decide to buy membership as a gift, you can choose for us to email a gift code either to yourself or your loved one, with the option of selecting a date for when the email is sent. To redeem a gift membership, the person will then need to <a target='_blank' class='underline' href='https://hydeparkpicturehouse.co.uk/membership'>visit our website’s membership pages</a>, select their membership, add it to their basket and proceed through checkout. During checkout, they’ll be able to add their gift code, which will discount their membership to £0.</p>",
   },
   {
     summary: "Why are there no more membership cards?",
@@ -151,7 +151,7 @@ const faqs = [
   {
     summary: "Why are you no longer posting film guides?",
     details:
-      "<p>Posting our monthly film guides to all members was always an extremely costly and time-consuming process. It was also something many members asked us not to do, as they didn't engage in our listings in this way and felt it was a waste of time and money.</p><p>By no longer posting all guides out, we’re able to introduce other benefits such as free tickets and discounts on food/drink. It also reduces the cinema’s environmental impact, by reducing the number of deliveries and programmes needing to be produced.</p><p>Film guides will still be produced when the cinema reopens, and available to collect from the cinema as well as a number of locations around the city. For anyone who struggles to access our listings online, and wholly relies on the film guide for their information, we will be looking at ways we can continue sending guides to those who need them.</p>",
+      "<p>Posting our monthly film guides to all members was always an extremely costly and time-consuming process. It was also something many members asked us not to do, as they didn't primarily engage with our listings in this way.</p><p>By no longer posting all guides out, we’re able to introduce other benefits such as free tickets and discounts on food/drink. It also reduces the cinema’s environmental impact, by reducing the number of deliveries and guides needing to be produced.</p><p>Film guides will still be produced when the cinema reopens, and available to collect from the cinema as well as a number of locations around the city. For anyone who struggles to access our listings online, and relies on the film guide for their information, we will be looking at ways we can continue sending guides to those who need them.</p>",
   },
   {
     summary: "What is auto-renew?",
@@ -402,21 +402,21 @@ function decreaseStrandIndex() {
     <div class="container max-w-5xl text-center mx-auto px-4">
       <p class="type-label pt-6 pb-12">Memberships</p>
       <h2 class="type-h5 lg:type-h3 pb-12 max-w-sm lg:max-w-4xl mx-auto">
-        As we prepare to reopen this spring, we’re excited to launch our new
-        HPPH Memberships.
+        As we prepare to reopen this April, we’re excited to launch our brand
+        new memberships.
       </h2>
 
       <div class="container max-w-2xl text-center mx-auto px-4 pb-16 space-y-6">
         <p>
-          HPPH members not only get to save money and enjoy exclusive benefits,
-          but they also help us deliver even more accessible screenings for
-          those in our community.
+          By becoming a member, not only can you save money and enjoy exclusive
+          benefits, but you’ll also help us deliver even more accessible
+          screenings for those in our community.
         </p>
 
         <p>
-          With all new memberships kicking in the day the cinema reopens – and
-          the first 500 members also receiving a limited-edition pin badge –
-          now’s the perfect time to join.
+          With all new memberships lasting a full year from the day the cinema
+          reopens – and the first 500 members also receiving a limited-edition
+          pin badge – now’s the perfect time to join.
         </p>
       </div>
     </div>
@@ -535,7 +535,7 @@ function decreaseStrandIndex() {
       target="_blank"
       aria-label="Purchase 15-25 membership"
       class="relative rounded-full w-12 p-3 border mx-auto mt-12 border-gray-dark hover:bg-white block hover:bg-opacity-25"
-      href="https://hydeparkpicturehouse.co.uk/membership/16-25/"
+      href="https://hydeparkpicturehouse.co.uk/membership/15-25/"
     >
       <svg
         class="text-white h-6 w-6"
@@ -551,7 +551,7 @@ function decreaseStrandIndex() {
       </svg>
     </a>
     <a
-      href="https://hydeparkpicturehouse.co.uk/membership/16-25/"
+      href="https://hydeparkpicturehouse.co.uk/membership/15-25/"
       class="type-subtitle relative inline-block text-center mt-4 text-yellow"
       >Sign up here</a
     >

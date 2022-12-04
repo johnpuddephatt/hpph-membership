@@ -136,7 +136,7 @@ const faqs = [
   {
     summary: "How can I get my pin-badge?",
     details:
-      "<p>For the first 500 new members, we’ll be posting out a limited-edition pin badges and postcards. These will be sent to all new members, as well as those purchase gift membership. Before Christmas, we will post the pins via Royal Mail 2nd class on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within 7 days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit. </p>",
+      "<p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards. These will be sent to all new members, as well as those who purchase gift membership.</p><p>Before Christmas, we’ll post the pins via Royal Mail 2nd class on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within 7 days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit.</p>",
   },
   {
     summary: "How does gift membership work?",

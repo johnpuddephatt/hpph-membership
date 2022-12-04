@@ -514,18 +514,20 @@ function decreaseStrandIndex() {
       Join our free membership for £5 tickets
     </p>
 
-    <div
-      class="relative bg-black bg-opacity-25 backdrop-blur-sm border border-gray-medium rounded-lg p-12 w-full max-w-lg aspect-[441/278] mx-auto relative"
-    >
-      <inline-svg
-        src="/logos/HPPH-1525.svg"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40"
-      ></inline-svg>
-
+    <div class="relative w-full max-w-lg mx-auto">
       <div
-        class="type-label absolute left-0 transform text-opacity-50 text-white top-1/2 -rotate-90 origin-center"
+        class="pt-[56%] relative p-12 bg-black bg-opacity-25 backdrop-blur-sm border border-gray-medium rounded-lg"
       >
-        Member #001
+        <inline-svg
+          src="/logos/HPPH-1525.svg"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40"
+        ></inline-svg>
+
+        <div
+          class="type-label absolute left-0 transform text-opacity-50 text-white top-1/2 -rotate-90 origin-center"
+        >
+          Member #001
+        </div>
       </div>
     </div>
 

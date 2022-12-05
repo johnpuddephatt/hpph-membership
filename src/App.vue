@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, computed } from "vue";
 import InlineSvg from "vue-inline-svg";
+import animationData from "./assets/animation.json";
 
 document.addEventListener("keydown", onKeydown);
 
@@ -20,7 +21,7 @@ const strands = [
     video:
       "https://res.cloudinary.com/hpph/video/upload/t_lowquality/v1670092670/membership/HPPH-loop.mp4",
     name: "Hyde Park Picture House",
-    logo: "logos/HPPH.svg",
+    // logo: "logos/HPPH.svg",
   },
   {
     angle: 3.5342917,
@@ -262,7 +263,9 @@ function decreaseStrandIndex() {
 </script>
 
 <template>
-  <inline-svg hidden v-for="strand in strands" :src="strand.logo" />
+  <div v-for="strand in strands" hidden>
+    <inline-svg v-if="strand.logo" hidden :src="strand.logo" />
+  </div>
 
   <div class="h-header relative bg-black">
     <h3
@@ -346,9 +349,17 @@ function decreaseStrandIndex() {
         >
           <div class="mx-auto lg:w-64 w-60 h-36 mt-6 lg:h-40">
             <inline-svg
+              v-if="selectedStrand.logo"
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
               class="w-full h-auto text-yellow"
+            />
+            <lottie-animation
+              class="w-[225%] ml-[-62.5%] mt-[-62.5%]"
+              v-else
+              ref="anim"
+              :autoPlay="true"
+              :animationData="animationData"
             />
           </div>
 

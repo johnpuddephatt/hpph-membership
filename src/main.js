@@ -1,5 +1,8 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
+import LottieAnimation from "lottie-web-vue";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+app.use(LottieAnimation);
+app.mount("#app");

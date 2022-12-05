@@ -6,6 +6,7 @@ import animationData from "./assets/animation.json";
 document.addEventListener("keydown", onKeydown);
 
 function onKeydown(event) {
+  if (!logoPlayed.value) return false;
   if (event.key == "ArrowLeft") {
     increaseStrandIndex();
   }
@@ -15,7 +16,6 @@ function onKeydown(event) {
 }
 
 function animationComplete() {
-  console.log("complete");
   video.value.play();
   logoJustPlayed.value = true;
   logoPlayed.value = true;

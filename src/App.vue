@@ -284,7 +284,7 @@ function decreaseStrandIndex() {
     <inline-svg v-if="strand.logo" hidden :src="strand.logo" />
   </div>
 
-  <div class="h-header relative bg-black">
+  <div class="h-header relative bg-black overflow-hidden w-full">
     <h3
       class="type-small transition duration-[2000ms] max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
       :class="{

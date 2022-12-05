@@ -14,6 +14,16 @@ function onKeydown(event) {
   }
 }
 
+function animationComplete() {
+  console.log("complete");
+  video.value.play();
+  logoJustPlayed.value = true;
+  logoPlayed.value = true;
+  setTimeout(() => {
+    logoJustPlayed.value = false;
+  }, 1200);
+}
+
 const strands = [
   {
     angle: 3.92699,
@@ -236,6 +246,11 @@ const selectedStrand = computed(() => {
   return strands[selectedStrandIndex.value];
 });
 
+const video = ref(null);
+
+const logoPlayed = ref(false);
+const logoJustPlayed = ref(false);
+
 const playing = ref(false);
 
 function updateSelectedStrandIndex(value) {
@@ -245,6 +260,7 @@ function updateSelectedStrandIndex(value) {
 
 function increaseStrandIndex() {
   playing.value = false;
+  logoPlayed.value = true;
   if (selectedStrandIndex.value < strands.length - 1) {
     selectedStrandIndex.value++;
   } else {
@@ -254,6 +270,7 @@ function increaseStrandIndex() {
 
 function decreaseStrandIndex() {
   playing.value = false;
+  logoPlayed.value = true;
   if (selectedStrandIndex.value > 0) {
     selectedStrandIndex.value--;
   } else {
@@ -263,14 +280,18 @@ function decreaseStrandIndex() {
 </script>
 
 <template>
-  <div v-for="strand in strands" hidden>
+  <div v-for="strand in strands" hidden class="scroll-smooth">
     <inline-svg v-if="strand.logo" hidden :src="strand.logo" />
   </div>
 
   <div class="h-header relative bg-black">
     <h3
-      class="type-small max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
-      :class="{ 'hidden lg:block': selectedStrandIndex }"
+      class="type-small transition duration-[2000ms] max-w-xs mx-auto relative z-40 pt-8 text-sm text-white text-center"
+      :class="{
+        'opacity-100': logoPlayed,
+        'opacity-0': !logoPlayed,
+        'hidden lg:block': selectedStrandIndex,
+      }"
     >
       HPPH will return April 2023.<br /><a
         href="https://hydeparkpicturehouse.co.uk"
@@ -281,12 +302,13 @@ function decreaseStrandIndex() {
     </h3>
 
     <video
+      ref="video"
       :key="selectedStrand.video"
       v-if="selectedStrand.video"
-      class="inset-0 absolute transition duration-1000 w-full h-full object-cover object-center"
+      class="inset-0 absolute transition duration-[2000ms] w-full h-full object-cover object-center"
       :class="{ 'opacity-70': playing, 'opacity-0': !playing }"
       @playing="playing = true"
-      autoplay="true"
+      :autoplay="logoPlayed"
       preload="true"
       loop="true"
       muted="true"
@@ -299,12 +321,17 @@ function decreaseStrandIndex() {
       class="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <button
-        class="w-10 h-10 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 -mt-3 absolute z-40"
+        class="transition duration-200 w-14 h-14 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 px-1 p-2 -mt-4 rounded-full absolute z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-60"
+        :class="{
+          'opacity-100': logoPlayed,
+          'opacity-0': !logoPlayed,
+          '!duration-[2000ms]': logoJustPlayed,
+        }"
         @click="increaseStrandIndex"
         aria-label="Go to previous strand"
       >
         <svg
-          class="transform rotate-180 origin-center w-full"
+          class="transform rotate-180 origin-center w-10"
           xmlns="http://www.w3.org/2000/svg"
           width="17.575"
           height="31.788"
@@ -320,7 +347,12 @@ function decreaseStrandIndex() {
         </svg>
       </button>
       <button
-        class="w-10 h-10 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 -mt-2.5 rounded-full z-40"
+        class="transition duration-200 w-14 h-14 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 px-1 p-2 -mt-3.5 rounded-full z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-60"
+        :class="{
+          'opacity-100': logoPlayed,
+          'opacity-0': !logoPlayed,
+          '!duration-[2000ms]': logoJustPlayed,
+        }"
         @click="decreaseStrandIndex"
         aria-label="Go to next strand"
       >
@@ -329,7 +361,7 @@ function decreaseStrandIndex() {
           width="17.575"
           height="31.788"
           viewBox="0 0 17.575 31.788"
-          class="w-full"
+          class="w-10 ml-2"
         >
           <path
             d="M0,0,14.744,14.723,0,29.447"
@@ -347,15 +379,16 @@ function decreaseStrandIndex() {
           class="type-label max-w-xs text-center lg:relative"
           :style="`color: ${selectedStrand.color}`"
         >
-          <div class="mx-auto lg:w-64 w-60 h-36 mt-6 lg:h-40">
+          <div class="mx-auto overflow-hidden lg:w-64 w-60 mt-6">
             <inline-svg
               v-if="selectedStrand.logo"
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
-              class="w-full h-auto text-yellow"
+              class="w-full mt-4 h-auto text-yellow"
             />
             <lottie-animation
-              class="w-[225%] ml-[-62.5%] mt-[-62.5%]"
+              @complete="animationComplete"
+              class="w-[225%] ml-[-62.5%]"
               v-else
               ref="anim"
               :autoPlay="true"
@@ -364,7 +397,7 @@ function decreaseStrandIndex() {
           </div>
 
           <div
-            class="absolute bottom-[35vh] lg:bottom-0 lg:top-full pt-12 leading-normal"
+            class="-ml-2 -mr-2 absolute bottom-[35vh] lg:bottom-0 lg:top-full pt-8 leading-normal"
           >
             {{ selectedStrand.description }}
           </div>
@@ -379,16 +412,29 @@ function decreaseStrandIndex() {
         v-for="(strand, key) in strands"
         @click="updateSelectedStrandIndex(key)"
         class="w-4 h-4 rounded-full left-1/2 top-1/2 absolute hover:scale-125 transition transform"
-        :style="`background-color: ${strand.color};--tw-translate-x : ${
+        :style="`transition-delay: ${key * 100}ms; background-color: ${
+          strand.color
+        };--tw-translate-x : ${
           Math.cos(strand.angle) * 50
         }vh; --tw-translate-y: ${Math.sin(strand.angle) * 50}vh;`"
-        :class="[selectedStrandIndex == key ? '!scale-150' : '']"
+        :class="{
+          '!scale-150': selectedStrandIndex == key,
+          'opacity-0': !logoPlayed,
+          'scale-0': !logoPlayed,
+          'duration-[2000ms]': logoJustPlayed,
+          '!delay-[0ms]': !logoJustPlayed,
+        }"
       ></button>
     </div>
 
     <a
-      class="absolute rounded-full block left-1/2 transform -translate-x-1/2 bottom-6 p-3 w-12 h-12 bg-gray-dark mx-auto bg-opacity-30 hover:bg-opacity-60"
+      class="duration-200 transition absolute rounded-full block left-1/2 transform -translate-x-1/2 bottom-6 p-3 w-12 h-12 bg-gray-dark mx-auto bg-opacity-30 focus-visible:bg-opacity-60 hover:bg-opacity-60"
       href="#memberships"
+      :class="{
+        'opacity-100': logoPlayed,
+        'opacity-0': !logoPlayed,
+        '!duration-[2000ms]': logoJustPlayed,
+      }"
       aria-label="View memberships"
     >
       <svg
@@ -456,7 +502,10 @@ function decreaseStrandIndex() {
     <h2 class="type-h4">Memberships</h2>
 
     <div class="mt-8 grid lg:grid-cols-3 gap-16 lg:gap-4">
-      <div v-for="membership in memberships" class="flex flex-col">
+      <div
+        v-for="membership in memberships"
+        class="flex flex-col bg-gray-medium"
+      >
         <div class="relative">
           <img class="" :src="membership.image" />
 
@@ -487,7 +536,7 @@ function decreaseStrandIndex() {
         </ul>
         <a
           :href="membership.signup_link"
-          class="type-subtitle bg-yellow text-center py-6 text-black"
+          class="type-subtitle bg-yellow text-center py-6 text-black hover:bg-opacity-90 transition"
         >
           Sign-up here
         </a>

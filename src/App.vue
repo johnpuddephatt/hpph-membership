@@ -384,7 +384,7 @@ function decreaseStrandIndex() {
               v-if="selectedStrand.logo"
               :src="selectedStrand.logo"
               :keepDuringLoading="false"
-              class="w-full mt-4 h-auto text-yellow"
+              class="overflow-hidden w-full mt-4 h-auto text-yellow"
             />
             <lottie-animation
               @complete="animationComplete"

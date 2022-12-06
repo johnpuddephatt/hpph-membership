@@ -321,7 +321,7 @@ function decreaseStrandIndex() {
       class="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <button
-        class="transition duration-200 w-14 h-14 right-full lg:right-[50vh] top-1/2 mr-6 lg:mr-0 px-1 p-2 -mt-4 rounded-full absolute z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-60"
+        class="transition duration-200 w-14 h-14 right-full lg:right-[50vh] top-1/2 mr-3 lg:mr-0 px-1 p-2 -mt-4 rounded-full absolute z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-30"
         :class="{
           'opacity-100': logoPlayed,
           'opacity-0': !logoPlayed,
@@ -347,7 +347,7 @@ function decreaseStrandIndex() {
         </svg>
       </button>
       <button
-        class="transition duration-200 w-14 h-14 left-full lg:left-[50vh] top-1/2 absolute ml-6 lg:ml-0 px-1 p-2 -mt-3.5 rounded-full z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-60"
+        class="transition duration-200 w-14 h-14 left-full lg:left-[50vh] top-1/2 absolute ml-3 lg:ml-0 px-1 p-2 -mt-3.5 rounded-full z-40 bg-gray-dark bg-opacity-0 focus-visible:bg-opacity-60 focus:outline-none hover:bg-opacity-30"
         :class="{
           'opacity-100': logoPlayed,
           'opacity-0': !logoPlayed,

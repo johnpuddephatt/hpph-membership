@@ -478,11 +478,17 @@ function decreaseStrandIndex() {
       </div>
     </div>
   </div>
-  <div class="bg-gray">
+  <div class="overflow-hi bg-gray relative">
+    <img
+      src="/images/pin-badge-large.png"
+      alt=""
+      class="inset-0 absolute h-full w-full object-cover object-bottom"
+    />
+
     <div
-      class="xxx-md:flex-row xxx-md:text-left container px-4 max-w-4xl text-center py-24 flex flex-col items-center gap-8"
+      class="relative z-10 container px-4 max-w-4xl text-center py-36 flex flex-col items-center gap-8"
     >
-      <div class="flex-1">
+      <div class="flex-1 mb-64">
         <h2 class="type-h4 mb-4">
           A special gift for your favourite film lover.
         </h2>
@@ -493,7 +499,7 @@ function decreaseStrandIndex() {
           for more details.
         </p>
       </div>
-      <img src="/images/pin-badge.png" alt="" class="w-32 h-auto mx-auto" />
+      <!-- <img src="/images/pin-badge-2.jpg" alt="" class="w-48 h-auto mx-auto" /> -->
     </div>
   </div>
 

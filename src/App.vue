@@ -145,11 +145,6 @@ const faqs = [
       "<p>Memberships begin the moment they are purchased, and benefits such as free tickets and ticket discounts can be enjoyed straight away – including at off-site screenings before the cinema reopens.</p><p>All memberships bought prior to reopening will expire 12 months after the cinema first opens its doors, meaning everyone will get to enjoy membership for a whole year of the Picture House being fully open again.</p>",
   },
   {
-    summary: "How can I get my pin-badge?",
-    details:
-      "<p>For the first 500 new members, we’ll be posting out limited-edition pin badges and postcards. These will be sent to all new members, as well as those who purchase a gift membership.</p><p>If you’d like to receive your pin before Christmas, you’ll need to have placed your order by 15th December, for the last guaranteed post on 16th December. Any memberships bought after Christmas, we'll aim to post your pin badge within seven days of receiving your order. Once the cinema has reopened, we’ll be asking new members to collect their pin badges from the cinema itself during their first visit.</p>",
-  },
-  {
     summary: "How does gift membership work?",
     details:
       "<p>If you decide to buy membership as a gift, you can choose for us to email a gift code either to yourself or your loved one, with the option of selecting a date for when the email is sent. To redeem a gift membership, the person will then need to <a target='_blank' class='underline' href='https://hydeparkpicturehouse.co.uk/membership'>visit our website’s membership pages</a>, select their membership, add it to their basket and proceed through checkout. During checkout, they’ll be able to add their gift code, which will discount their membership to £0.</p>",
@@ -183,7 +178,6 @@ const benefits = [
   "Ticket discount",
   "HPPH Membership",
   "Three months free MUBI",
-  "Limited-edition pin-badge",
 ];
 
 const memberships = [
@@ -197,7 +191,6 @@ const memberships = [
       "Members’ newsletter (inc. exclusive offers)",
       "Priority booking on special events",
       "Three months free MUBI",
-      "Limited edition pin badge",
     ],
     signup_link: "https://hydeparkpicturehouse.co.uk/membership/16mm",
     gift_link: "https://hydeparkpicturehouse.co.uk/membership/16mm",
@@ -212,7 +205,6 @@ const memberships = [
       "Members’ newsletter (inc. exclusive offers)",
       "Priority booking on special events",
       "Three months free MUBI",
-      "Limited edition pin badge",
       "Four free tickets (worth £36 full price)",
       "Then £1 off tickets (once per film)",
       "10% off selected food/drink",
@@ -230,7 +222,6 @@ const memberships = [
       "Members’ newsletter (inc. exclusive offers)",
       "Priority booking on special events",
       "Three months free MUBI",
-      "Limited edition pin badge",
       "Eight free tickets (worth £72 full price)",
       "Then £1.50 off tickets (up to twice per film)",
       "15% off selected food/drink",
@@ -472,13 +463,13 @@ function decreaseStrandIndex() {
 
         <p>
           With all new memberships lasting a full year from the day the cinema
-          reopens – and the first 500 members also receiving a limited-edition
-          pin badge – now’s the perfect time to join.
+          reopens – and gift memberships also available for your favourite film
+          lover – now’s the perfect time to sign-up.
         </p>
       </div>
     </div>
   </div>
-  <div class="overflow-hi bg-gray relative">
+  <!--<div class="overflow-hi bg-gray relative">
     <img
       src="/images/pin-badge-large.png"
       alt=""
@@ -499,9 +490,9 @@ function decreaseStrandIndex() {
           for more details.
         </p>
       </div>
-      <!-- <img src="/images/pin-badge-2.jpg" alt="" class="w-48 h-auto mx-auto" /> -->
+    
     </div>
-  </div>
+  </div>-->
 
   <div class="bg-black py-20 container px-4 text-white text-center">
     <p class="type-label pt-6 pb-2">HPPH</p>

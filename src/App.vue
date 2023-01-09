@@ -464,7 +464,7 @@ function decreaseStrandIndex() {
         <p>
           With all new memberships lasting a full year from the day the cinema
           reopens – and gift memberships also available for your favourite film
-          lover – now’s the perfect time to sign-up.
+          lover – now’s the perfect time to join.
         </p>
       </div>
     </div>

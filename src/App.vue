@@ -450,7 +450,7 @@ function decreaseStrandIndex() {
     <div class="container max-w-5xl text-center mx-auto px-4">
       <p class="type-label pt-6 pb-12">Memberships</p>
       <h2 class="type-h5 lg:type-h3 pb-12 max-w-sm lg:max-w-4xl mx-auto">
-        As we prepare to reopen this April, we’re excited to launch our brand
+        As we prepare to reopen this spring, we’re excited to launch our brand
         new memberships.
       </h2>
 

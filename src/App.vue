@@ -284,7 +284,7 @@ function decreaseStrandIndex() {
         'hidden lg:block': selectedStrandIndex,
       }"
     >
-      HPPH will return April 2023.<br /><a
+      HPPH will return spring 2023.<br /><a
         href="https://hydeparkpicturehouse.co.uk"
         target="_blank"
         class="underline"
